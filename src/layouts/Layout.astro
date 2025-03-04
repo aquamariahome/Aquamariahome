@@ -1,3 +1,7 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,16 +11,9 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white bg-[url('/img/small-grn-vertical.jpg')] bg-cover md:bg-[url('/img/wall-big-grn-horizontal.png')]">
+		<div class="max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8 rounded-t-[999px] md:rounded-t-[500px] lg:rounded-t-[400px] rounded-b-[200px] md:rounded-b-[100px] bg-white bg-cover overflow-visible shadow-lg">
+			<slot />
+		</div>	
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,0 +1,9 @@
+---
+const { title, link, imageUrl } = Astro.props;
+---
+
+<div class={`relative bg-[url('${imageUrl}')] bg-cover bg-center w-full md:h-[500px] h-[200px] rounded-[40px] flex items-center justify-center`}>
+    <a href={link} target="_blank" class="absolute w-full text-center bg-white/75 py-4 text-gray-700 text-xl font-light">
+        {title}
+    </a>
+</div>

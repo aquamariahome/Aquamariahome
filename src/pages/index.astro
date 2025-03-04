@@ -1,11 +1,37 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Banner from '../components/Banner.astro';
+
+const links = [
+    {
+        title: 'Book us',
+        link: 'https://tu-link1.com',
+        imageUrl: '/img/liv-front-door.jpg',
+    },
+    {
+        title: 'Contact us',
+        link: 'https://tu-link2.com',
+        imageUrl: '/img/liv-front-door.jpg',
+    },
+    {
+        title: 'Gallery',
+        link: 'https://tu-link3.com',
+        imageUrl: '/img/liv-front-door.jpg',
+    }
+];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+    <Header/>
+    <section class="flex flex-col items-center gap-4 p-4 max-w-screen-lg mx-auto">
+        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="BOOK US"/>
+        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="CONTACT US"/>
+        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="PHOTOS & VIDEOS"/>        
+    </section>
 </Layout>
+<Banner title="ABOUT US" link="https://google.com"/>
