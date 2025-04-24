@@ -1,0 +1,8 @@
+---
+const { modalId, title, imageUrl } = Astro.props;
+---
+<button data-modal-trigger={modalId}  class="cursor-pointer relative bg-cover bg-center w-full md:h-[500px] h-[200px] rounded-[40px] flex items-center justify-center" style={`background-image: url('${imageUrl}')`}>
+    <div  class="absolute w-full text-center bg-white/75 py-4 text-gray-700 text-xl font-light">
+        {title}
+    </div>
+</button>

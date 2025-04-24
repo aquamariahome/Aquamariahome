@@ -1,0 +1,23 @@
+---
+import RoundedX from "./icons/RoundedX.astro";
+
+const { id } = Astro.props;
+---
+
+<div id={id} class="modal fixed inset-0 z-50 hidden items-center justify-center bg-black/50 transition-opacity">
+  <div class="modal-content relative bg-white rounded-xl shadow-lg max-w-lg w-full overflow-hidden p-6">
+    <button data-modal-close class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl font-bold">
+      <RoundedX/>
+    </button>
+
+    <slot />
+  </div>
+</div>
+
+<script type="module" src="/src/components/modalHandler.js" />
+
+<style>
+  .modal.open {
+    display: flex !important;
+  }
+</style>

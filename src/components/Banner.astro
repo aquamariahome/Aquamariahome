@@ -1,5 +1,9 @@
+---
+const { link } = Astro.props;
+---
+
 <footer class="bg-repeat text-center py-10 relative">
-  <div class="bg-white inline-block w-64 md:w-80 lg:w-96 py-2 px-6 rounded-lg shadow-lg">
+  <a href={link} target="_blank" class="bg-yellow-50 inline-block w-64 md:w-80 lg:w-96 py-2 px-6 rounded-lg shadow-lg">
     <h2 class="text-xl text-gray-600 m-0 font-light">ABOUT US</h2>
-  </div>
+  </a>
 </footer>

@@ -1,25 +1,44 @@
 ---
-import Header from '../components/Header.astro';
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Banner from '../components/Banner.astro';
+import Header from "../components/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Banner from "../components/Banner.astro";
+import Footer from "../components/Footer.astro";
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+} from "free-astro-components";
+import AboutUsModal from "../components/AboutUsModal.astro";
+import CardModal from "../components/CardModal.astro";
 
 const links = [
-    {
-        title: 'Book us',
-        link: 'https://tu-link1.com',
-        imageUrl: '/img/liv-front-door.jpg',
-    },
-    {
-        title: 'Contact us',
-        link: 'https://tu-link2.com',
-        imageUrl: '/img/liv-front-door.jpg',
-    },
-    {
-        title: 'Gallery',
-        link: 'https://tu-link3.com',
-        imageUrl: '/img/liv-front-door.jpg',
-    }
+  {
+    title: "BOOK US",
+    imageUrl: "https://placehold.co/600x400",
+    modal: true,
+    modalId: "modal-id",
+  },
+  {
+    title: "CONTACT US",
+    imageUrl: "https://placehold.co/600x400",
+    modal: true,
+    modalId: "modal-id",
+  },
+  {
+    title: "PHOTOS & VIDEOS",
+    link: "https://tu-link3.com",
+    imageUrl: "https://placehold.co/600x400",
+    modal: false,
+  },
+  {
+    title: "ABOUT US",
+    imageUrl: "https://placehold.co/600x400",
+    modal: true,
+    modalId: "modal-id",
+  },
 ];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -27,11 +46,29 @@ const links = [
 ---
 
 <Layout>
-    <Header/>
-    <section class="flex flex-col items-center gap-4 p-4 max-w-screen-lg mx-auto">
-        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="BOOK US"/>
-        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="CONTACT US"/>
-        <Card imageUrl="/img/liv-front-door.jpg" link="google.com" title="PHOTOS & VIDEOS"/>        
-    </section>
+  <Header />
+  <section class="flex flex-col items-center gap-4 p-4 max-w-screen-lg mx-auto">
+    {
+      links.map((item) =>
+        item.modal ? (
+          <CardModal
+            modalId={item.modalId}
+            title={item.title}
+            imageUrl={item.imageUrl}
+          />
+        ) : (
+          <Card title={item.title} link={item.link} imageUrl={item.imageUrl} />
+        )
+      )
+    }
+
+    <!-- Asegúrate que este modal tenga un ID único y que CardModal lo active -->
+    <AboutUsModal
+      title="About Us Content"
+      imageUrl="https://placehold.co/600x400"
+      modalId="about-us-modal"
+    />
+  </section>
 </Layout>
-<Banner title="ABOUT US" link="https://google.com"/>
+<Footer />
+<!-- <Banner title="ABOUT US" link="https://google.com"/> -->
