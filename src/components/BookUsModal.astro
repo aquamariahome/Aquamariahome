@@ -1,0 +1,31 @@
+---
+import Airbnb from "./icons/Airbnb.astro";
+import Vrbo from "./icons/Vrbo.astro";
+import Booking from "./icons/Booking.astro"; // Asegúrate de tener este ícono también
+import Modal from "./Modal.astro";
+import ModalBody from "./ModalBody.astro";
+import ModalFooter from "./ModalFooter.astro";
+import ModalHeader from "./ModalHeader.astro";
+import airbnb from "../assets/airbnb.svg";
+import Button from "./Button.astro";
+---
+
+<Modal id="book-us-modal">
+  <ModalHeader>
+    <h1 class="text-[#577975] text-2xl text-center font-light tracking-widest">BOOK US</h1>
+  </ModalHeader>
+  <ModalBody>
+    <div class="flex items-center flex-col gap-5">
+      <Button>
+        <Airbnb class="h-14 w-40"/>
+      </Button>
+      <Button>
+        <Vrbo class="h-14 w-40"/>
+      </Button>
+      <Button>
+        <Booking class="h-14 w-40"/>
+      </Button>
+    </div>
+  </ModalBody>
+  <ModalFooter />
+</Modal>

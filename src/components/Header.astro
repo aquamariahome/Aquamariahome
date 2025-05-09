@@ -6,7 +6,7 @@ import Youtube from './icons/Youtube.astro'
 
 const socialLinks = [
   { component: IgIcon, href: 'https://www.instagram.com/aquamariafll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { component: Youtube, href: 'https://youtube.com/tu_usuario' },
+  { component: Youtube, href: 'https://youtube.com/@aquamariafll?si=r5xl33I1IlsvNAvB ' },
   { component: Facebook, href: 'https://www.facebook.com/profile.php?id=61564889409599' },
   { component: WhatsApp, href: 'https://wa.me/+19547360066' },
 ];
@@ -18,7 +18,7 @@ const socialLinks = [
     <h2 class="font-normal text-3xl text-[#577975]">Vacation Rental Home</h2>
     <div class="social-icons flex gap-4">
       {socialLinks.map(link => (
-        <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-[#577975] hover:text-[#A7A8AA] transition-colors duration-300">
+        <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-[#5D918A] hover:text-[#A7A8AA] transition-colors duration-300">
           <link.component class="size-[52px] p-1.5 md:size-[80px]" />
         </a>
       ))}

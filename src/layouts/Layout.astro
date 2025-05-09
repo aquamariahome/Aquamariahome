@@ -4,16 +4,30 @@ import "../styles/global.css";
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body class="bg-white bg-[url('/img/small-grn-vertical.jpg')] bg-cover md:bg-[url('/img/wall-big-grn-horizontal.png')]">
-		<div class="max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8 rounded-t-[999px] md:rounded-t-[500px] lg:rounded-t-[400px] rounded-b-[200px] md:rounded-b-[100px] bg-white bg-cover overflow-visible shadow-lg">
-			<slot />
-		</div>	
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Aquamaria Home</title>
+  </head>
+  <body
+    class="bg-[url('/img/bg-phone.png')] bg-[length:100vw_auto]
+    sm:bg-[url('/img/bg-phone-tall.png')] sm:bg-[length:100vw_auto]
+    md:bg-[url('/img/bg-tablet.png')] md:bg-[length:auto_100vh]
+    lg:bg-[url('/img/bg-desktop.png')] lg:bg-[length:100%_auto]
+    bg-repeat bg-top"
+  >
+    <!-- Contenedor con fondo opalescente y desenfoque -->
+    <!-- <div class="max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8 
+            rounded-t-[999px] md:rounded-t-[500px] lg:rounded-t-[400px] 
+            rounded-b-[200px] md:rounded-b-[100px] 
+            bg-white/50 backdrop-blur-md 
+            overflow-visible shadow-lg relative z-10"> -->
+    <div
+      class="max-w-6xl mx-auto py-10 md:py-20 px-4 md:px-8 rounded-t-[999px] md:rounded-t-[500px] lg:rounded-t-[400px] rounded-b-[200px] md:rounded-b-[100px] bg-white overflow-visible shadow-lg"
+    >
+      <slot />
+    </div>
+  </body>
 </html>

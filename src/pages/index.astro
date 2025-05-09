@@ -13,31 +13,33 @@ import {
 } from "free-astro-components";
 import AboutUsModal from "../components/AboutUsModal.astro";
 import CardModal from "../components/CardModal.astro";
+import BookUsModal from "../components/BookUsModal.astro";
+import ContactUsModal from "../components/ContactUsModal.astro";
 
 const links = [
   {
     title: "BOOK US",
-    imageUrl: "https://placehold.co/600x400",
+    imageUrl: "/img/book-us.jpg",
     modal: true,
-    modalId: "modal-id",
+    modalId: "book-us-modal",
   },
   {
     title: "CONTACT US",
-    imageUrl: "https://placehold.co/600x400",
+    imageUrl: "/img/contact-us.jpg",
     modal: true,
-    modalId: "modal-id",
+    modalId: "contact-us-modal",
   },
   {
     title: "PHOTOS & VIDEOS",
-    link: "https://tu-link3.com",
-    imageUrl: "https://placehold.co/600x400",
+    link: "https://www.instagram.com/aquamariafll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D",
+    imageUrl: "/img/photos-vid.jpg",
     modal: false,
   },
   {
     title: "ABOUT US",
-    imageUrl: "https://placehold.co/600x400",
+    imageUrl: "/img/about-us.jpg",
     modal: true,
-    modalId: "modal-id",
+    modalId: "about-us-modal",
   },
 ];
 
@@ -64,9 +66,13 @@ const links = [
 
     <!-- Asegúrate que este modal tenga un ID único y que CardModal lo active -->
     <AboutUsModal
-      title="About Us Content"
-      imageUrl="https://placehold.co/600x400"
       modalId="about-us-modal"
+    />
+    <BookUsModal
+      modalId="book-us-modal"
+    />
+    <ContactUsModal
+      modalId="contact-us-modal"
     />
   </section>
 </Layout>
