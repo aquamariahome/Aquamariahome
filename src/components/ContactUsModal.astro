@@ -12,7 +12,15 @@ import ModalHeader from "./ModalHeader.astro";
     </h1>
   </ModalHeader>
   <ModalBody>
-    <form class="flex flex-col gap-4" method="POST" data-netlify="true">
+    <form
+      class="flex flex-col gap-4"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      id="contact-form"
+
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <label class="flex flex-col text-sm text-[#5D918A]">
         Name
         <input
