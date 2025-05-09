@@ -7,41 +7,41 @@ import ModalHeader from "./ModalHeader.astro";
 
 <Modal id="contact-us-modal">
   <ModalHeader>
-    <h1 class="text-[#577975] text-2xl text-center font-light tracking-widest">
+    <h1 class="text-[#5D918A] text-2xl text-center font-light tracking-widest">
       CONTACT US
     </h1>
   </ModalHeader>
   <ModalBody>
-    <form class="flex flex-col gap-4">
-      <label class="flex flex-col text-sm text-[#577975]">
+    <form class="flex flex-col gap-4" method="POST" data-netlify="true">
+      <label class="flex flex-col text-sm text-[#5D918A]">
         Name
         <input
           type="text"
           name="name"
           required
-          class="mt-1 p-2 border border-[#577975] rounded-md"
+          class="mt-1 p-2 border border-[#4D7A75] rounded-md"
           placeholder="Your name"
         />
       </label>
 
-      <label class="flex flex-col text-sm text-[#577975]">
+      <label class="flex flex-col text-sm text-[#5D918A]">
         Email
         <input
           type="email"
           name="email"
           required
-          class="mt-1 p-2 border border-[#577975] rounded-md"
+          class="mt-1 p-2 border border-[#4D7A75] rounded-md"
           placeholder="your@email.com"
         />
       </label>
 
-      <label class="flex flex-col text-sm text-[#577975]">
+      <label class="flex flex-col text-sm text-[#5D918A]">
         Message
         <textarea
           name="message"
           rows="4"
           required
-          class="mt-1 p-2 border border-[#577975] rounded-md resize-none"
+          class="mt-1 p-2 border border-[#4D7A75] rounded-md resize-none"
           placeholder="Write your message here..."></textarea>
       </label>
     </form>
@@ -50,7 +50,7 @@ import ModalHeader from "./ModalHeader.astro";
     <button
       type="submit"
       form="contact-form"
-      class="w-full bg-[#577975] text-white py-2 px-4 rounded-md hover:bg-[#46625c] transition"
+      class="w-full bg-[#4D7A75] text-white py-2 px-4 rounded-md hover:bg-[#46625c] transition"
     >
       Send Message
     </button>

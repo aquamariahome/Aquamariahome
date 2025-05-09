@@ -1,14 +1,20 @@
-<button
-  class="flex items-center flex-col justify-between w-full max-w-xs px-6 py-3
+---
+const { link } = Astro.props;
+---
+
+<a href={link} class="w-full max-w-xs" target="_blank">
+  <button
+    class="flex items-center flex-col justify-between w-full max-w-xs px-6 py-3
          bg-[#5D918A] rounded-2xl text-white font-medium
          hover:bg-[#4a7771] active:bg-[#3b605b]
          focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5D918A]
          transition duration-200 ease-in-out
          cursor-pointer shadow-md"
->
-  <div class="flex items-center gap-2">
+  >
     <div class="flex items-center gap-2">
-      <slot />
+      <div class="flex items-center gap-2">
+        <slot />
+      </div>
     </div>
-  </div>
-</button>
+  </button>
+</a>
