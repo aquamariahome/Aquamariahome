@@ -31,7 +31,7 @@ const links = [
   },
   {
     title: "PHOTOS & VIDEOS",
-    link: "https://www.instagram.com/aquamariafll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D",
+    link: "https://www.instagram.com/aquamariafll/reels/",
     imageUrl: "/img/photos-vid.jpg",
     modal: false,
   },
@@ -49,7 +49,7 @@ const links = [
 
 <Layout>
   <Header />
-  <section class="flex flex-col items-center gap-4 p-4 max-w-screen-lg mx-auto">
+  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-7 p-2 max-w-screen-lg mx-auto">
     {
       links.map((item) =>
         item.modal ? (

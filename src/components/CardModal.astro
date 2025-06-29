@@ -1,8 +1,19 @@
 ---
-const { modalId, title, imageUrl } = Astro.props;
+const { modalId, title, link, imageUrl } = Astro.props;
 ---
-<button data-modal-trigger={modalId}  class="cursor-pointer relative bg-cover bg-center w-full md:h-[500px] h-[200px] rounded-[40px] flex items-center justify-center" style={`background-image: url('${imageUrl}')`}>
-    <div  class="absolute w-full text-center bg-white/75 py-4 text-gray-700 text-xl font-light tracking-widest">
-        {title}
+
+<div class="drop-shadow-lg">
+  <a
+    data-modal-trigger={modalId}
+    href={link}
+    target="_blank"
+    class="transition-all duration-300 ease-in-out hover:scale-[1.015] hover:-translate-y-1 aspect-[16/9.8] sm:aspect-[16/7.2] md:aspect-[16/8] lg:aspect-[16/9.8] rounded-[40px] overflow-hidden flex items-center justify-center"
+    style={`background-image: url('${imageUrl}'); background-size: cover; background-position: center;`}
+  >
+    <div
+      class="w-full bg-white/80 text-gray-500 text-center text-2xl sm:text-2xl py-3 tracking-wider font-extralight"
+    >
+      {title}
     </div>
-</button>
+  </a>
+</div>

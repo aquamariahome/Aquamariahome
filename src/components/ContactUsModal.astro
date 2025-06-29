@@ -7,13 +7,14 @@ import ModalHeader from "./ModalHeader.astro";
 
 <Modal id="contact-us-modal">
   <ModalHeader>
-    <h1 class="text-[#5D918A] text-2xl text-center font-light tracking-widest">
+    <h1 class="text-[#5D918A] text-2xl text-center font-light tracking-widest py-4">
       CONTACT US
     </h1>
+    <p class="text-sm text-gray-400 flex flex-col">Have questions about our place? Please fill out the form below, and we'll get back to you shortly. You can also request a phone call in your message.</p>
   </ModalHeader>
   <ModalBody>
     <form
-      class="flex flex-col gap-4"
+      class="flex flex-col"
       name="contact"
       method="POST"
       data-netlify="true"
