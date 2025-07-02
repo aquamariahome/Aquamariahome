@@ -7,10 +7,16 @@ import ModalHeader from "./ModalHeader.astro";
 
 <Modal id="contact-us-modal">
   <ModalHeader>
-    <h1 class="text-[#5D918A] text-2xl text-center font-light tracking-widest py-4">
+    <h1
+      class="text-[#5D918A] text-2xl text-center font-light tracking-widest py-4"
+    >
       CONTACT US
     </h1>
-    <p class="text-sm text-gray-400 flex flex-col">Have questions about our place? Please fill out the form below, and we'll get back to you shortly. You can also request a phone call in your message.</p>
+    <p class="text-sm text-gray-400 flex flex-col">
+      Have questions about our place? Please fill out the form below, and we'll
+      get back to you shortly. You can also request a phone call in your
+      message.
+    </p>
   </ModalHeader>
   <ModalBody>
     <form
@@ -18,11 +24,21 @@ import ModalHeader from "./ModalHeader.astro";
       name="contact"
       method="POST"
       data-netlify="true"
+      netlify-honeypot="bot-field"
       id="contact-form"
-
     >
+      <!-- Campo oculto para Netlify -->
       <input type="hidden" name="form-name" value="contact" />
-      <label class="flex flex-col text-sm text-[#5D918A]">
+
+      <!-- Campo antispam oculto (honeypot) -->
+      <p class="hidden">
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
+      </p>
+
+      <!-- Nombre -->
+      <label class="flex flex-col text-sm text-[#5D918A] mb-4">
         Name
         <input
           type="text"
@@ -33,7 +49,8 @@ import ModalHeader from "./ModalHeader.astro";
         />
       </label>
 
-      <label class="flex flex-col text-sm text-[#5D918A]">
+      <!-- Email -->
+      <label class="flex flex-col text-sm text-[#5D918A] mb-4">
         Email
         <input
           type="email"
@@ -44,7 +61,8 @@ import ModalHeader from "./ModalHeader.astro";
         />
       </label>
 
-      <label class="flex flex-col text-sm text-[#5D918A]">
+      <!-- Mensaje -->
+      <label class="flex flex-col text-sm text-[#5D918A] mb-4">
         Message
         <textarea
           name="message"
@@ -53,6 +71,14 @@ import ModalHeader from "./ModalHeader.astro";
           class="mt-1 p-2 border border-[#4D7A75] rounded-md resize-none"
           placeholder="Write your message here..."></textarea>
       </label>
+
+      <!-- Botón enviar -->
+      <button
+        type="submit"
+        class="bg-[#5D918A] text-white py-2 px-4 rounded-md hover:bg-[#4D7A75] transition-colors"
+      >
+        Send Message
+      </button>
     </form>
   </ModalBody>
   <ModalFooter>

@@ -6,17 +6,17 @@ import Youtube from './icons/Youtube.astro'
 
 const socialLinks = [
   { component: IgIcon, href: 'https://www.instagram.com/aquamariafll?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
-  { component: Youtube, href: 'https://youtube.com/@aquamariafll?si=r5xl33I1IlsvNAvB ' },
+  { component: Youtube, href: 'https://www.youtube.com/@aquamariafll/shorts' },
   { component: Facebook, href: 'https://www.facebook.com/profile.php?id=61564889409599' },
   { component: WhatsApp, href: 'https://wa.me/+19547360066' },
 ];
 ---
 
 <header class="bg-cover bg-center text-center p-0 w-full h-full flex flex-col justify-start items-center">
-  <div class="profile flex flex-col items-center gap-2 my-5">
-    <img src="/img/logo1080X1080.png" alt="Aquamaria" class="aquamarialogo w-[180px] md:w-[300px] h-auto rounded-full bg-white" />
+  <div class="profile flex flex-col items-center gap-4 my-5">
+    <img src="/img/logo1080X1080.png" alt="Aquamaria" class="aquamarialogo w-[180px] md:w-[210px] h-auto rounded-full bg-white" />
     <h2 class="font-normal text-3xl text-[#577975]">Vacation Rental Home</h2>
-    <div class="social-icons flex gap-2">
+    <div class="social-icons flex gap-4">
       {socialLinks.map(link => (
         <a href={link.href} target="_blank" rel="noopener noreferrer" class="text-[#5D918A] hover:text-[#A7A8AA] transition-colors duration-300">
           <link.component class="size-[52px] p-1.5 md:size-[62px]" />

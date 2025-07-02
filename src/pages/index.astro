@@ -19,25 +19,25 @@ import ContactUsModal from "../components/ContactUsModal.astro";
 const links = [
   {
     title: "BOOK US",
-    imageUrl: "/img/book-us.jpg",
+    imageUrl: "/img/book-us.webp",
     modal: true,
     modalId: "book-us-modal",
   },
   {
     title: "CONTACT US",
-    imageUrl: "/img/contact-us.jpg",
+    imageUrl: "/img/contact-us.webp",
     modal: true,
     modalId: "contact-us-modal",
   },
   {
     title: "PHOTOS & VIDEOS",
     link: "https://www.instagram.com/aquamariafll/reels/",
-    imageUrl: "/img/photos-vid.jpg",
+    imageUrl: "/img/photos-vid.webp",
     modal: false,
   },
   {
     title: "ABOUT US",
-    imageUrl: "/img/about-us.jpg",
+    imageUrl: "/img/about-us.webp",
     modal: true,
     modalId: "about-us-modal",
   },
@@ -49,7 +49,7 @@ const links = [
 
 <Layout>
   <Header />
-  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-7 p-2 max-w-screen-lg mx-auto">
+  <section class="grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-screen-lg mx-auto">
     {
       links.map((item) =>
         item.modal ? (
